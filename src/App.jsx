@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import MyComponent from './MyComponent'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import CreateUser from './CreateUser'
+import Pagination from './Pagination'
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
     <QueryClientProvider client={queryClient}>
+      <Pagination/>
       <CreateUser/>
       <MyComponent/>
       <ReactQueryDevtools initialIsOpen={false}/>
